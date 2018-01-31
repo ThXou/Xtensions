@@ -18,6 +18,7 @@
 		AA335B6F2021CC660083D70F /* String+Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA335B6C2021CC660083D70F /* String+Characters.swift */; };
 		AA335B702021CC660083D70F /* String+NSString.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA335B6D2021CC660083D70F /* String+NSString.swift */; };
 		AA335B712021CC660083D70F /* String+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA335B6E2021CC660083D70F /* String+Validation.swift */; };
+		AA335B79202206050083D70F /* UINavigationController+Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA335B78202206050083D70F /* UINavigationController+Transitions.swift */; };
 		B49C6C6A90C39714E00413C4 /* Pods_XtensionsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBA19E6902252652363B5E8F /* Pods_XtensionsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		AA335B6C2021CC660083D70F /* String+Characters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Characters.swift"; path = "../../../../Source/String/String+Characters.swift"; sourceTree = "<group>"; };
 		AA335B6D2021CC660083D70F /* String+NSString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+NSString.swift"; path = "../../../../Source/String/String+NSString.swift"; sourceTree = "<group>"; };
 		AA335B6E2021CC660083D70F /* String+Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Validation.swift"; path = "../../../../Source/String/String+Validation.swift"; sourceTree = "<group>"; };
+		AA335B78202206050083D70F /* UINavigationController+Transitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UINavigationController+Transitions.swift"; path = "../../../../Source/UINavigationController/UINavigationController+Transitions.swift"; sourceTree = "<group>"; };
 		CBA19E6902252652363B5E8F /* Pods_XtensionsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XtensionsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -135,6 +137,7 @@
 		AA335B542021B7540083D70F /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				AA335B77202205F10083D70F /* UINavigationController */,
 				AA335B692021CC580083D70F /* String */,
 				AA335B682021CC530083D70F /* UIDevice */,
 				AA335B632021C9C80083D70F /* Bundle */,
@@ -205,6 +208,14 @@
 			children = (
 			);
 			path = Bundle;
+			sourceTree = "<group>";
+		};
+		AA335B77202205F10083D70F /* UINavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				AA335B78202206050083D70F /* UINavigationController+Transitions.swift */,
+			);
+			path = UINavigationController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,6 +384,7 @@
 				AA335B652021C9E30083D70F /* Bundle+Version.swift in Sources */,
 				AA335B6F2021CC660083D70F /* String+Characters.swift in Sources */,
 				AA335B702021CC660083D70F /* String+NSString.swift in Sources */,
+				AA335B79202206050083D70F /* UINavigationController+Transitions.swift in Sources */,
 				AA335B352021AF180083D70F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
