@@ -27,11 +27,11 @@ import Foundation
 
 extension String {
     
-    var x_trimmed: String {
+    public var x_trimmed: String {
         return trimmingCharacters(in: .whitespacesAndNewlines)
     }
     
-    var x_isEmpty: Bool {
+    public var x_isEmpty: Bool {
         return x_trimmed.isEmpty
     }
     

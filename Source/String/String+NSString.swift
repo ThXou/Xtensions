@@ -27,34 +27,34 @@ import Foundation
 
 extension String {
     
-    var x_lastPathComponent: String {
+    public var x_lastPathComponent: String {
         return (self as NSString).lastPathComponent
     }
     
-    var x_pathExtension: String {
+    public var x_pathExtension: String {
         return (self as NSString).pathExtension
     }
     
-    var x_deletingLastPathComponent: String {
+    public var x_deletingLastPathComponent: String {
         return (self as NSString).deletingLastPathComponent
     }
     
-    var x_deletingPathExtension: String {
+    public var x_deletingPathExtension: String {
         return (self as NSString).deletingPathExtension
     }
     
-    var x_pathComponents: [String] {
+    public var x_pathComponents: [String] {
         return (self as NSString).pathComponents
     }
     
     
     // MARK: - Methods
-    func x_appendingPath(component: String) -> String {
+    public func x_appendingPath(component: String) -> String {
         let nsSt = self as NSString
         return nsSt.appendingPathComponent(component)
     }
     
-    func x_appendingPath(extension ext: String) -> String? {
+    public func x_appendingPath(extension ext: String) -> String? {
         let nsSt = self as NSString
         return nsSt.appendingPathExtension(ext)
     }

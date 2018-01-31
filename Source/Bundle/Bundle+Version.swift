@@ -27,19 +27,19 @@ import Foundation
 
 extension Bundle {
     
-    func x_build() -> String {
+    public func x_build() -> String {
         return x_info(for: "CFBundleVersion")!
     }
     
-    func x_name() -> String {
+    public func x_name() -> String {
         return x_info(for: "CFBundleName")!
     }
     
-    func x_version() -> String {
+    public func x_version() -> String {
         return x_info(for: "CFBundleShortVersionString")!
     }
     
-    func x_info(for key: String) -> String? {
+    public func x_info(for key: String) -> String? {
         return infoDictionary?[key] as? String
     }
     

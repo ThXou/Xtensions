@@ -27,7 +27,7 @@ import Foundation
 import UIKit
 
 
-enum AnimationType: String {
+public enum AnimationType: String {
     case fade   = "fade"
     case moveIn = "moveIn"
     case push   = "push"
@@ -37,7 +37,7 @@ enum AnimationType: String {
 
 extension UINavigationController {
     
-    private static var defaultAnimationDuration = 0.3
+    public static let defaultAnimationDuration = 0.3
     
     
     // MARK: - Helpers
@@ -55,30 +55,30 @@ extension UINavigationController {
     
     
     // MARK: - Push animations
-    func pushFadeViewController(_ viewController: UIViewController, duration: Double = defaultAnimationDuration) {
+    public func pushFadeViewController(_ viewController: UIViewController, duration: Double = defaultAnimationDuration) {
         pushViewController(viewController, duration: duration, animation: .fade)
     }
     
-    func pushViewController(_ viewController: UIViewController, duration: Double = defaultAnimationDuration, animation type: AnimationType = .fade) {
+    public func pushViewController(_ viewController: UIViewController, duration: Double = defaultAnimationDuration, animation type: AnimationType = .fade) {
         addDefaultTransitionToLayer(type: type, duration: duration)
         pushViewController(viewController, animated: false)
     }
     
     
     // MARK: - Pop animations
-    func popFadeViewController(duration: Double = 0.3) {
+    public func popFadeViewController(duration: Double = 0.3) {
         addDefaultTransitionToLayer(type: .fade, duration: duration)
         popViewController(animated: false)
     }
     
-    func popFadeToRootViewController(duration: Double = 0.3) {
+    public func popFadeToRootViewController(duration: Double = 0.3) {
         addDefaultTransitionToLayer(type: .fade, duration: duration)
         popToRootViewController(animated: false)
     }
     
     
     // MARK: - Reset animations
-    func resetRootViewController(_ viewController: UIViewController, shouldFade: Bool = false) {
+    public func resetRootViewController(_ viewController: UIViewController, shouldFade: Bool = false) {
         viewControllers.insert(viewController, at: 0)
         setViewControllers(viewControllers, animated: false)
         
@@ -89,7 +89,7 @@ extension UINavigationController {
     
     
     // MARK: - Replace
-    func replaceCurrent(with viewController: UIViewController, duration: Double = defaultAnimationDuration) {
+    public func replaceCurrent(with viewController: UIViewController, duration: Double = defaultAnimationDuration) {
         replaceControllers(upTo: 1, with: viewController, duration: duration)
     }
     

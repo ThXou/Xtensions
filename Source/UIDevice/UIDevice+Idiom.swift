@@ -28,21 +28,21 @@ import UIKit
 
 extension UIDevice {
     
-    var x_isIPad: Bool {
+    public var x_isIPad: Bool {
         return userInterfaceIdiom == .pad
     }
     
-    var x_isIPhone: Bool {
+    public var x_isIPhone: Bool {
         return userInterfaceIdiom == .phone
     }
     
     @available(iOS 9.0, *)
-    var x_isAppleTV: Bool {
+    public var x_isAppleTV: Bool {
         return userInterfaceIdiom == .tv
     }
     
     @available(iOS 9.0, *)
-    var x_isCarPlay: Bool {
+    public var x_isCarPlay: Bool {
         return userInterfaceIdiom == .carPlay
     }
     

@@ -27,18 +27,18 @@ import Foundation
 
 extension String {
     
-    var x_isValidEmail: Bool {
+    public var x_isValidEmail: Bool {
         return String.x_isValidEmail(with: self)
     }
     
     
     // MARK: - Methods
-    static func x_isValidEmail(with string: String) -> Bool {
+    public static func x_isValidEmail(with string: String) -> Bool {
         let regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
         return x_matches(regex: regex)
     }
     
-    static func x_matches(regex: String) -> Bool {
+    public static func x_matches(regex: String) -> Bool {
         let predicate = NSPredicate(format: "SELF MATCHES %@", regex)
         return predicate.evaluate(with: nil, substitutionVariables: nil)
     }
