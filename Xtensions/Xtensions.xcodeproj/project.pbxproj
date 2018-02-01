@@ -45,12 +45,12 @@
 		AA335B4A2021B4D00083D70F /* XtensionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XtensionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA335B4C2021B4D00083D70F /* XtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XtensionsTests.swift; sourceTree = "<group>"; };
 		AA335B4E2021B4D00083D70F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AA9EAD3C20231FFA0086CAD9 /* Bundle+Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Bundle+Version.swift"; path = "../../../../Source/Bundle/Bundle+Version.swift"; sourceTree = "<group>"; };
-		AA9EAD3E202320010086CAD9 /* String+Characters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Characters.swift"; path = "../../../../Source/String/String+Characters.swift"; sourceTree = "<group>"; };
-		AA9EAD3F202320010086CAD9 /* String+NSString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+NSString.swift"; path = "../../../../Source/String/String+NSString.swift"; sourceTree = "<group>"; };
-		AA9EAD40202320010086CAD9 /* String+Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Validation.swift"; path = "../../../../Source/String/String+Validation.swift"; sourceTree = "<group>"; };
-		AA9EAD44202320060086CAD9 /* UIDevice+Idiom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIDevice+Idiom.swift"; path = "../../../../Source/UIDevice/UIDevice+Idiom.swift"; sourceTree = "<group>"; };
-		AA9EAD462023200A0086CAD9 /* UINavigationController+Transitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UINavigationController+Transitions.swift"; path = "../../../../Source/UINavigationController/UINavigationController+Transitions.swift"; sourceTree = "<group>"; };
+		AA9EAD3C20231FFA0086CAD9 /* Bundle+Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Version.swift"; sourceTree = "<group>"; };
+		AA9EAD3E202320010086CAD9 /* String+Characters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Characters.swift"; sourceTree = "<group>"; };
+		AA9EAD3F202320010086CAD9 /* String+NSString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+NSString.swift"; sourceTree = "<group>"; };
+		AA9EAD40202320010086CAD9 /* String+Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Validation.swift"; sourceTree = "<group>"; };
+		AA9EAD44202320060086CAD9 /* UIDevice+Idiom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Idiom.swift"; sourceTree = "<group>"; };
+		AA9EAD462023200A0086CAD9 /* UINavigationController+Transitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Transitions.swift"; sourceTree = "<group>"; };
 		CBA19E6902252652363B5E8F /* Pods_XtensionsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XtensionsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -181,7 +181,8 @@
 				AA9EAD3920231FE40086CAD9 /* Bundle */,
 				AA9EAD3820231FDC0086CAD9 /* UINavigationController */,
 			);
-			path = Source;
+			name = Source;
+			path = ../../Source;
 			sourceTree = "<group>";
 		};
 		AA9EAD3820231FDC0086CAD9 /* UINavigationController */ = {
