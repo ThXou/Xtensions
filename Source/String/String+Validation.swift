@@ -38,6 +38,11 @@ extension String {
         return x_matches(regex: regex)
     }
     
+    public static func x_isValidPhone(with string: String) -> Bool {
+        let regex = "^((\\+)|(00))[0-9]{6,14}$"
+        return x_matches(regex: regex)
+    }
+    
     public static func x_matches(regex: String) -> Bool {
         let predicate = NSPredicate(format: "SELF MATCHES %@", regex)
         return predicate.evaluate(with: nil, substitutionVariables: nil)
