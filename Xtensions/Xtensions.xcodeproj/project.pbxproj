@@ -22,6 +22,7 @@
 		AABCF6AC202C552A00DC72D2 /* UIView+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABCF6AB202C552A00DC72D2 /* UIView+Frame.swift */; };
 		B49C6C6A90C39714E00413C4 /* Pods_XtensionsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBA19E6902252652363B5E8F /* Pods_XtensionsTests.framework */; };
 		B63CF6072045791D00DF6A46 /* UIView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63CF6062045791D00DF6A46 /* UIView+Layer.swift */; };
+		B63CF60F2045984700DF6A46 /* UITableView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63CF60E2045984700DF6A46 /* UITableView+Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		AA9EAD462023200A0086CAD9 /* UINavigationController+Transitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Transitions.swift"; sourceTree = "<group>"; };
 		AABCF6AB202C552A00DC72D2 /* UIView+Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Frame.swift"; sourceTree = "<group>"; };
 		B63CF6062045791D00DF6A46 /* UIView+Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layer.swift"; sourceTree = "<group>"; };
+		B63CF60E2045984700DF6A46 /* UITableView+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Utilities.swift"; sourceTree = "<group>"; };
 		CBA19E6902252652363B5E8F /* Pods_XtensionsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XtensionsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -229,6 +231,7 @@
 			children = (
 				AABCF6AB202C552A00DC72D2 /* UIView+Frame.swift */,
 				B63CF6062045791D00DF6A46 /* UIView+Layer.swift */,
+				B63CF60E2045984700DF6A46 /* UITableView+Utilities.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 			files = (
 				AA9EAD472023200A0086CAD9 /* UINavigationController+Transitions.swift in Sources */,
 				AA9EAD43202320010086CAD9 /* String+Validation.swift in Sources */,
+				B63CF60F2045984700DF6A46 /* UITableView+Utilities.swift in Sources */,
 				AA9EAD3D20231FFA0086CAD9 /* Bundle+Version.swift in Sources */,
 				AA335B372021AF180083D70F /* ViewController.swift in Sources */,
 				B63CF6072045791D00DF6A46 /* UIView+Layer.swift in Sources */,
