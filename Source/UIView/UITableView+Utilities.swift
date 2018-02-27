@@ -1,5 +1,5 @@
 //
-//  UIView+Layer.swift
+//  UITableView+Utilities.swift
 //  Xtensions
 //
 //  Copyright (c) 2018 Jesús Solé

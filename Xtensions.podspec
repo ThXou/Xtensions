@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Xtensions"
-  s.version          = "1.0.6"
+  s.version          = "1.0.7"
   s.summary          = "A collection of useful Swift extensions."
   s.homepage         = "https://bitbucket.org/doonamis/xtensions"
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
