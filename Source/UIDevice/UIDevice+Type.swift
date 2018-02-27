@@ -26,40 +26,40 @@
 import UIKit
 
 public enum Model: String {
-    case simulator   = "simulator/sandbox",
-    iPod1            = "iPod 1",
-    iPod2            = "iPod 2",
-    iPod3            = "iPod 3",
-    iPod4            = "iPod 4",
-    iPod5            = "iPod 5",
-    iPad2            = "iPad 2",
-    iPad3            = "iPad 3",
-    iPad4            = "iPad 4",
-    iPhone4          = "iPhone 4",
-    iPhone4S         = "iPhone 4S",
-    iPhone5          = "iPhone 5",
-    iPhone5S         = "iPhone 5S",
-    iPhone5C         = "iPhone 5C",
-    iPadMini1        = "iPad Mini 1",
-    iPadMini2        = "iPad Mini 2",
-    iPadMini3        = "iPad Mini 3",
-    iPadAir1         = "iPad Air 1",
-    iPadAir2         = "iPad Air 2",
-    iPadPro9_7       = "iPad Pro 9.7\"",
-    iPadPro9_7_cell  = "iPad Pro 9.7\" cellular",
-    iPadPro12_9      = "iPad Pro 12.9\"",
-    iPadPro12_9_cell = "iPad Pro 12.9\" cellular",
-    iPhone6          = "iPhone 6",
-    iPhone6plus      = "iPhone 6 Plus",
-    iPhone6S         = "iPhone 6S",
-    iPhone6Splus     = "iPhone 6S Plus",
-    iPhoneSE         = "iPhone SE",
-    iPhone7          = "iPhone 7",
-    iPhone7plus      = "iPhone 7 Plus",
-    iPhone8          = "iPhone 8",
-    iPhone8plus      = "iPhone 8 Plus",
-    iPhoneX          = "iPhone X",
-    unrecognized     = "?unrecognized?"
+    case simulator        = "simulator/sandbox"
+    case iPod1            = "iPod 1"
+    case iPod2            = "iPod 2"
+    case iPod3            = "iPod 3"
+    case iPod4            = "iPod 4"
+    case iPod5            = "iPod 5"
+    case iPad2            = "iPad 2"
+    case iPad3            = "iPad 3"
+    case iPad4            = "iPad 4"
+    case iPhone4          = "iPhone 4"
+    case iPhone4S         = "iPhone 4S"
+    case iPhone5          = "iPhone 5"
+    case iPhone5S         = "iPhone 5S"
+    case iPhone5C         = "iPhone 5C"
+    case iPadMini1        = "iPad Mini 1"
+    case iPadMini2        = "iPad Mini 2"
+    case iPadMini3        = "iPad Mini 3"
+    case iPadAir1         = "iPad Air 1"
+    case iPadAir2         = "iPad Air 2"
+    case iPadPro9_7       = "iPad Pro 9.7\""
+    case iPadPro9_7_cell  = "iPad Pro 9.7\" cellular"
+    case iPadPro12_9      = "iPad Pro 12.9\""
+    case iPadPro12_9_cell = "iPad Pro 12.9\" cellular"
+    case iPhone6          = "iPhone 6"
+    case iPhone6plus      = "iPhone 6 Plus"
+    case iPhone6S         = "iPhone 6S"
+    case iPhone6Splus     = "iPhone 6S Plus"
+    case iPhoneSE         = "iPhone SE"
+    case iPhone7          = "iPhone 7"
+    case iPhone7plus      = "iPhone 7 Plus"
+    case iPhone8          = "iPhone 8"
+    case iPhone8plus      = "iPhone 8 Plus"
+    case iPhoneX          = "iPhone X"
+    case unrecognized     = "?unrecognized?"
 }
 
 public extension UIDevice {
@@ -71,72 +71,46 @@ public extension UIDevice {
                 ptr in String.init(validatingUTF8: ptr)
             }
         }
-        var modelMap: [String:Model] = [
-            "i386"       : .simulator,
-            "x86_64"     : .simulator,
-            "iPod1,1"    : .iPod1,
-            "iPod2,1"    : .iPod2,
-            "iPod3,1"    : .iPod3,
-            "iPod4,1"    : .iPod4,
-            "iPod5,1"    : .iPod5,
-            "iPad2,1"    : .iPad2,
-            "iPad2,2"    : .iPad2,
-            "iPad2,3"    : .iPad2,
-            "iPad2,4"    : .iPad2,
-            "iPad2,5"    : .iPadMini1,
-            "iPad2,6"    : .iPadMini1,
-            "iPad2,7"    : .iPadMini1,
-            "iPhone3,1"  : .iPhone4,
-            "iPhone3,2"  : .iPhone4,
-            "iPhone3,3"  : .iPhone4,
-            "iPhone4,1"  : .iPhone4S,
-            "iPhone5,1"  : .iPhone5,
-            "iPhone5,2"  : .iPhone5,
-            "iPhone5,3"  : .iPhone5C,
-            "iPhone5,4"  : .iPhone5C,
-            "iPad3,1"    : .iPad3,
-            "iPad3,2"    : .iPad3,
-            "iPad3,3"    : .iPad3,
-            "iPad3,4"    : .iPad4,
-            "iPad3,5"    : .iPad4,
-            "iPad3,6"    : .iPad4,
-            "iPhone6,1"  : .iPhone5S,
-            "iPhone6,2"  : .iPhone5S,
-            "iPad4,1"    : .iPadAir1,
-            "iPad4,2"    : .iPadAir2,
-            "iPad4,4"    : .iPadMini2,
-            "iPad4,5"    : .iPadMini2,
-            "iPad4,6"    : .iPadMini2,
-            "iPad4,7"    : .iPadMini3,
-            "iPad4,8"    : .iPadMini3,
-            "iPad4,9"    : .iPadMini3,
-            "iPad6,3"    : .iPadPro9_7,
-            "iPad6,11"   : .iPadPro9_7,
-            "iPad6,4"    : .iPadPro9_7_cell,
-            "iPad6,12"   : .iPadPro9_7_cell,
-            "iPad6,7"    : .iPadPro12_9,
-            "iPad6,8"    : .iPadPro12_9_cell,
-            "iPhone7,1"  : .iPhone6plus,
-            "iPhone7,2"  : .iPhone6,
-            "iPhone8,1"  : .iPhone6S,
-            "iPhone8,2"  : .iPhone6Splus,
-            "iPhone8,4"  : .iPhoneSE,
-            "iPhone9,1"  : .iPhone7,
-            "iPhone9,2"  : .iPhone7plus,
-            "iPhone9,3"  : .iPhone7,
-            "iPhone9,4"  : .iPhone7plus,
-            "iPhone10,1" : .iPhone8,
-            "iPhone10,2" : .iPhone8plus,
-            "iPhone10,3" : .iPhoneX,
-            "iPhone10,4" : .iPhone8,
-            "iPhone10,5" : .iPhone8plus,
-            "iPhone10,6" : .iPhoneX
-        ]
-        
-        if let model = modelMap[String.init(validatingUTF8: modelCode!)!] {
-            return model
+        if let model = modelCode, let modelString = String.init(validatingUTF8: model) {
+            switch modelString {
+            case "i386", "x86_64"                               : return .simulator
+            case "iPod1,1"                                      : return .iPod1
+            case "iPod2,1"                                      : return .iPod2
+            case "iPod3,1"                                      : return .iPod3
+            case "iPod4,1"                                      : return .iPod4
+            case "iPod5,1"                                      : return .iPod5
+            case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4"     : return .iPad2
+            case "iPad2,5", "iPad2,6", "iPad2,7"                : return .iPadMini1
+            case "iPhone3,1", "iPhone3,2", "iPhone3,3"          : return .iPhone4
+            case "iPhone4,1"                                    : return .iPhone4S
+            case "iPhone5,1", "iPhone5,2"                       : return .iPhone5
+            case "iPhone5,3", "iPhone5,4"                       : return .iPhone5C
+            case "iPad3,1", "iPad3,2", "iPad3,3"                : return .iPad3
+            case "iPad3,4", "iPad3,5", "iPad3,6"                : return .iPad4
+            case "iPhone6,1", "iPhone6,2"                       : return .iPhone5S
+            case "iPad4,1"                                      : return .iPadAir1
+            case "iPad4,2"                                      : return .iPadAir2
+            case "iPad4,4", "iPad4,5", "iPad4,6"                : return .iPadMini2
+            case "iPad4,7", "iPad4,8", "iPad4,9"                : return .iPadMini3
+            case "iPad6,3", "iPad6,11"                          : return .iPadPro9_7
+            case "iPad6,4", "iPad6,12"                          : return .iPadPro9_7_cell
+            case "iPad6,7"                                      : return .iPadPro12_9
+            case "iPad6,8"                                      : return .iPadPro12_9_cell
+            case "iPhone7,1", "iPhone8,2"                       : return .iPhone6plus
+            case "iPhone7,2"                                    : return .iPhone6
+            case "iPhone8,1"                                    : return .iPhone6S
+            case "iPhone8,4"                                    : return .iPhoneSE
+            case "iPhone9,1", "iPhone9,3"                       : return .iPhone7
+            case "iPhone9,2", "iPhone9,4"                       : return .iPhone7plus
+            case "iPhone10,1", "iPhone10,4"                     : return .iPhone8
+            case "iPhone10,2", "iPhone10,5"                     : return .iPhone8plus
+            case "iPhone10,3", "iPhone10,6"                     : return .iPhoneX
+            default: return .unrecognized
+            }
         }
-        return Model.unrecognized
+        return .unrecognized
     }
+    
+    public var modelName: String { return type.rawValue }
 }
 
