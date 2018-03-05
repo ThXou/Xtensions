@@ -33,6 +33,14 @@ extension UIView {
         }
         set {
             self.layer.cornerRadius = newValue ? self.frame.height / 2.0 : self.cornerRadius
+        }
+    }
+    
+    @IBInspectable var setMaskToBounds: Bool {
+        get {
+            return self.layer.masksToBounds
+        }
+        set {
             self.layer.masksToBounds = newValue
         }
     }
@@ -43,7 +51,6 @@ extension UIView {
         }
         set {
             self.layer.cornerRadius = newValue
-            self.layer.masksToBounds = newValue > 0
         }
     }
     
