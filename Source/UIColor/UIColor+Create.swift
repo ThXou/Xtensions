@@ -28,11 +28,11 @@ import UIKit
 
 extension UIColor {
     
-    convenience init(r: Double, g: Double, b: Double) {
+    public convenience init(r: Double, g: Double, b: Double) {
         self.init(red: CGFloat(r)/255.0, green: CGFloat(g)/255.0, blue: CGFloat(b)/255.0, alpha: 1.0)
     }
     
-    convenience init(hexRed: Int, hexGreen: Int, hexBlue: Int) {
+    public convenience init(hexRed: Int, hexGreen: Int, hexBlue: Int) {
         assert(hexRed >= 0 && hexRed <= 255, "Invalid red component")
         assert(hexGreen >= 0 && hexGreen <= 255, "Invalid green component")
         assert(hexBlue >= 0 && hexBlue <= 255, "Invalid blue component")
@@ -40,7 +40,7 @@ extension UIColor {
         self.init(red: CGFloat(hexRed) / 255.0, green: CGFloat(hexGreen) / 255.0, blue: CGFloat(hexBlue) / 255.0, alpha: 1.0)
     }
     
-    convenience init(hexRGB: Int) {
+    public convenience init(hexRGB: Int) {
         self.init(hexRed: (hexRGB >> 16) & 0xFF, hexGreen: (hexRGB >> 8) & 0xFF, hexBlue: hexRGB & 0xFF)
     }
     

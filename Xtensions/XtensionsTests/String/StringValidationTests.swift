@@ -1,5 +1,5 @@
 //
-//  String+Validation.swift
+//  StringValidationTests.swift
 //  Xtensions
 //
 //  Copyright (c) 2018 Luis Cárdenas
@@ -23,29 +23,37 @@
 //  THE SOFTWARE.
 //
 
-import Foundation
+import XCTest
+import Nimble
+@testable import Xtensions
 
-extension String {
+class StringValidationTests: XCTestCase {
     
-    public var x_isValidEmail: Bool {
-        return String.x_isValidEmail(with: self)
+    override func setUp() {
+        super.setUp()
+        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
-    
-    // MARK: - Methods
-    public static func x_isValidEmail(with string: String) -> Bool {
-        let regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
-        return string.x_matches(regex: regex)
+    override func tearDown() {
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        super.tearDown()
     }
     
-    public static func x_isValidPhone(with string: String) -> Bool {
-        let regex = "(?:\\+\\d{1,4})\\s*(\\d{6,14})"
-        return string.x_matches(regex: regex)
+    func testEmailStringIsValidEmail() {
+        let email = "tester_1234@tester.es"
+        expect(email.x_isValidEmail).to(beTrue())
     }
     
-    public func x_matches(regex: String) -> Bool {
-        let predicate = NSPredicate(format: "SELF MATCHES %@", regex)
-        return predicate.evaluate(with: self, substitutionVariables: nil)
+    func testGivenEmailStringIsValidEmail() {
+        let email = "tester_1234@subtester.tester.es"
+        let result = String.x_isValidEmail(with: email)
+        expect(result).to(beTrue())
+    }
+    
+    func testGivenPhoneNumberStringIsValudPhoneNumber() {
+        let phone = "+11 111111111"
+        let result = String.x_isValidPhone(with: phone)
+        expect(result).to(beTrue())
     }
     
 }
