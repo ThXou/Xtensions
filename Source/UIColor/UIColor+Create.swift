@@ -1,5 +1,5 @@
 //
-//  String+Validation.swift
+//  UIColor+Create.swift
 //  Xtensions
 //
 //  Copyright (c) 2018 Luis Cárdenas
@@ -24,28 +24,24 @@
 //
 
 import Foundation
+import UIKit
 
-extension String {
+extension UIColor {
     
-    public var x_isValidEmail: Bool {
-        return String.x_isValidEmail(with: self)
+    convenience init(r: Double, g: Double, b: Double) {
+        self.init(red: CGFloat(r)/255.0, green: CGFloat(g)/255.0, blue: CGFloat(b)/255.0, alpha: 1.0)
     }
     
-    
-    // MARK: - Methods
-    public static func x_isValidEmail(with string: String) -> Bool {
-        let regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
-        return x_matches(regex: regex)
+    convenience init(hexRed: Int, hexGreen: Int, hexBlue: Int) {
+        assert(hexRed >= 0 && hexRed <= 255, "Invalid red component")
+        assert(hexGreen >= 0 && hexGreen <= 255, "Invalid green component")
+        assert(hexBlue >= 0 && hexBlue <= 255, "Invalid blue component")
+        
+        self.init(red: CGFloat(hexRed) / 255.0, green: CGFloat(hexGreen) / 255.0, blue: CGFloat(hexBlue) / 255.0, alpha: 1.0)
     }
     
-    public static func x_isValidPhone(with string: String) -> Bool {
-        let regex = "^((\\+)|(00))[0-9]{6,14}$"
-        return x_matches(regex: regex)
-    }
-    
-    public static func x_matches(regex: String) -> Bool {
-        let predicate = NSPredicate(format: "SELF MATCHES %@", regex)
-        return predicate.evaluate(with: self)
+    convenience init(hexRGB: Int) {
+        self.init(hexRed: (hexRGB >> 16) & 0xFF, hexGreen: (hexRGB >> 8) & 0xFF, hexBlue: hexRGB & 0xFF)
     }
     
 }
