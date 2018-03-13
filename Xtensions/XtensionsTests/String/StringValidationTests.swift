@@ -1,6 +1,6 @@
 //
 //  StringValidationTests.swift
-//  Xtensions
+//  XtensionsTests
 //
 //  Copyright (c) 2018 Luis Cárdenas
 //

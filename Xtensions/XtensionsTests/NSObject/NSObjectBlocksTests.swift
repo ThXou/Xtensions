@@ -1,6 +1,6 @@
 //
-//  ViewController.swift
-//  Xtensions
+//  NSObjectBlocksTests.swift
+//  XtensionsTests
 //
 //  Copyright (c) 2018 Luis Cárdenas
 //
@@ -23,14 +23,28 @@
 //  THE SOFTWARE.
 //
 
-import UIKit
+import XCTest
+import Nimble
+@testable import Xtensions
 
-class ViewController: UIViewController {
+class NSObjectBlocksTests: XCTestCase {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    override func setUp() {
+        super.setUp()
+        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-
+    
+    override func tearDown() {
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        super.tearDown()
+    }
+    
+    func testAfterDelayExecuteBlock() {
+        var teams = [String]()
+        x_after(delay: 2.0) {
+            teams.append("FCBarcelona")
+        }
+        expect(teams).toEventually(contain("FCBarcelona"), timeout: 3.0)
+    }
+    
 }
-

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  NSObject+Blocks.swift
 //  Xtensions
 //
 //  Copyright (c) 2018 Luis Cárdenas
@@ -23,14 +23,13 @@
 //  THE SOFTWARE.
 //
 
-import UIKit
+import Foundation
 
-class ViewController: UIViewController {
+extension NSObject {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    public func x_after(delay: TimeInterval, block: @escaping (() -> ())) {
+        let when = DispatchTime.now() + delay
+        DispatchQueue.main.asyncAfter(deadline: when, execute: block)
     }
-
+    
 }
-

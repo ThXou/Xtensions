@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA238CBB20580FB3001CE53A /* NSObject+Blocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA238CBA20580FB3001CE53A /* NSObject+Blocks.swift */; };
+		AA238CBE205811DB001CE53A /* NSObjectBlocksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA238CBD205811DB001CE53A /* NSObjectBlocksTests.swift */; };
 		AA335B352021AF180083D70F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA335B342021AF180083D70F /* AppDelegate.swift */; };
 		AA335B372021AF180083D70F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA335B362021AF180083D70F /* ViewController.swift */; };
 		AA335B3A2021AF180083D70F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA335B382021AF180083D70F /* Main.storyboard */; };
@@ -40,6 +42,8 @@
 /* Begin PBXFileReference section */
 		0013C0D4AE4A5C0251CBBD34 /* Pods-XtensionsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XtensionsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XtensionsTests/Pods-XtensionsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0EB0ECB73AA0ADDDC18ED392 /* Pods-XtensionsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XtensionsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XtensionsTests/Pods-XtensionsTests.release.xcconfig"; sourceTree = "<group>"; };
+		AA238CBA20580FB3001CE53A /* NSObject+Blocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Blocks.swift"; sourceTree = "<group>"; };
+		AA238CBD205811DB001CE53A /* NSObjectBlocksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectBlocksTests.swift; sourceTree = "<group>"; };
 		AA335B312021AF180083D70F /* Xtensions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Xtensions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA335B342021AF180083D70F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA335B362021AF180083D70F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +104,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AA238CB920580F7C001CE53A /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				AA238CBA20580FB3001CE53A /* NSObject+Blocks.swift */,
+			);
+			path = NSObject;
+			sourceTree = "<group>";
+		};
+		AA238CBC205811C1001CE53A /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				AA238CBD205811DB001CE53A /* NSObjectBlocksTests.swift */,
+			);
+			path = NSObject;
+			sourceTree = "<group>";
+		};
 		AA335B282021AF180083D70F = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +155,7 @@
 		AA335B4B2021B4D00083D70F /* XtensionsTests */ = {
 			isa = PBXGroup;
 			children = (
+				AA238CBC205811C1001CE53A /* NSObject */,
 				AA335B762021D24A0083D70F /* Bundle */,
 				AA335B752021D2440083D70F /* UIDevice */,
 				AA335B742021D23E0083D70F /* String */,
@@ -186,6 +207,7 @@
 		AA9EAD3720231FD30086CAD9 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				AA238CB920580F7C001CE53A /* NSObject */,
 				AADD918920568779005CAB66 /* UIColor */,
 				AABCF6AA202C54D800DC72D2 /* UIView */,
 				AA9EAD3B20231FED0086CAD9 /* String */,
@@ -421,6 +443,7 @@
 				AABCF6AC202C552A00DC72D2 /* UIView+Frame.swift in Sources */,
 				AA9EAD45202320060086CAD9 /* UIDevice+Idiom.swift in Sources */,
 				B6A49ABC2045B79A004BC6C3 /* UIDevice+Type.swift in Sources */,
+				AA238CBB20580FB3001CE53A /* NSObject+Blocks.swift in Sources */,
 				AA9EAD42202320010086CAD9 /* String+NSString.swift in Sources */,
 				AA335B352021AF180083D70F /* AppDelegate.swift in Sources */,
 			);
@@ -431,6 +454,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AADD918D20568D17005CAB66 /* StringValidationTests.swift in Sources */,
+				AA238CBE205811DB001CE53A /* NSObjectBlocksTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
