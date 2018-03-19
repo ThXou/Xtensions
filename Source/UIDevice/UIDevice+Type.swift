@@ -68,10 +68,10 @@ public extension UIDevice {
         uname(&systemInfo)
         let modelCode = withUnsafePointer(to: &systemInfo.machine) {
             $0.withMemoryRebound(to: CChar.self, capacity: 1) {
-                ptr in String.init(validatingUTF8: ptr)
+                ptr in String(validatingUTF8: ptr)
             }
         }
-        if let model = modelCode, let modelString = String.init(validatingUTF8: model) {
+        if let model = modelCode, let modelString = String(validatingUTF8: model) {
             switch modelString {
             case "i386", "x86_64"                               : return .simulator
             case "iPod1,1"                                      : return .iPod1
