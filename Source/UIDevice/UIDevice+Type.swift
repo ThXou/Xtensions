@@ -45,10 +45,10 @@ public enum Model: String {
     case iPadMini3        = "iPad Mini 3"
     case iPadAir1         = "iPad Air 1"
     case iPadAir2         = "iPad Air 2"
-    case iPadPro9_7       = "iPad Pro 9.7\""
-    case iPadPro9_7_cell  = "iPad Pro 9.7\" cellular"
-    case iPadPro12_9      = "iPad Pro 12.9\""
-    case iPadPro12_9_cell = "iPad Pro 12.9\" cellular"
+    case iPadPro9_7       = "iPad Pro 9.7"
+    case iPadPro9_7_cell  = "iPad Pro 9.7 cellular"
+    case iPadPro12_9      = "iPad Pro 12.9"
+    case iPadPro12_9_cell = "iPad Pro 12.9 cellular"
     case iPhone6          = "iPhone 6"
     case iPhone6plus      = "iPhone 6 Plus"
     case iPhone6S         = "iPhone 6S"
@@ -63,7 +63,7 @@ public enum Model: String {
 }
 
 public extension UIDevice {
-    public var type: Model {
+    public var x_type: Model {
         var systemInfo = utsname()
         uname(&systemInfo)
         let modelCode = withUnsafePointer(to: &systemInfo.machine) {
@@ -111,6 +111,6 @@ public extension UIDevice {
         return .unrecognized
     }
     
-    public var modelName: String { return type.rawValue }
+    public var x_modelName: String { return x_type.rawValue }
 }
 
