@@ -28,7 +28,8 @@ import UIKit
 
 extension UIColor {
     
-    public convenience init(r: Double, g: Double, b: Double) {
+    // MARK: - Initializers
+    public convenience init(r: Int, g: Int, b: Int) {
         self.init(red: CGFloat(r)/255.0, green: CGFloat(g)/255.0, blue: CGFloat(b)/255.0, alpha: 1.0)
     }
     
@@ -42,6 +43,12 @@ extension UIColor {
     
     public convenience init(hexRGB: Int) {
         self.init(hexRed: (hexRGB >> 16) & 0xFF, hexGreen: (hexRGB >> 8) & 0xFF, hexBlue: hexRGB & 0xFF)
+    }
+    
+    
+    // MARK: -
+    public class func x_random() -> UIColor {
+        return UIColor(r: Int(arc4random_uniform(255)), g: Int(arc4random_uniform(255)), b: Int(arc4random_uniform(255)))
     }
     
 }
