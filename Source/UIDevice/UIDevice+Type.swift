@@ -59,6 +59,9 @@ public enum Model: String {
     case iPhone8          = "iPhone 8"
     case iPhone8plus      = "iPhone 8 Plus"
     case iPhoneX          = "iPhone X"
+    case iPhoneXS         = "iPhone XS"
+    case iPhoneXSMax      = "iPhone XS Max"
+    case iPhoneXR         = "iPhone XR"
     case unrecognized     = "?unrecognized?"
 }
 
@@ -105,6 +108,9 @@ public extension UIDevice {
             case "iPhone10,1", "iPhone10,4"                     : return .iPhone8
             case "iPhone10,2", "iPhone10,5"                     : return .iPhone8plus
             case "iPhone10,3", "iPhone10,6"                     : return .iPhoneX
+            case "iPhone11,2"                                   : return .iPhoneXS
+            case "iPhone11,4"                                   : return .iPhoneXSMax
+            case "iPhone11,8"                                   : return .iPhoneXR
             default: return .unrecognized
             }
         }

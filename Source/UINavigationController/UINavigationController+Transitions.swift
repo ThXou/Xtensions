@@ -44,8 +44,8 @@ extension UINavigationController {
     private func defaultTransition(type: AnimationType, duration: Double = defaultAnimationDuration) -> CATransition {
         let transition = CATransition()
         transition.duration = duration
-        transition.timingFunction = CAMediaTimingFunction(name: "easeInEaseOut")
-        transition.type = type.rawValue
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName(rawValue: "easeInEaseOut"))
+        transition.type = CATransitionType(rawValue: type.rawValue)
         return transition
     }
     
