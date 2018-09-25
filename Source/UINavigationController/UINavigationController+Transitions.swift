@@ -45,7 +45,16 @@ extension UINavigationController {
         let transition = CATransition()
         transition.duration = duration
         transition.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
-        transition.type = CATransitionType(rawValue: type.rawValue)
+        switch type {
+        case .fade:
+            transition.type = .fade
+        case .moveIn:
+            transition.type = .moveIn
+        case .push:
+            transition.type = .push
+        case .reveal:
+            transition.type = .reveal
+        }
         return transition
     }
     
