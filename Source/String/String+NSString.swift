@@ -50,13 +50,11 @@ extension String {
     
     // MARK: - Methods
     public func x_appendingPath(component: String) -> String {
-        let nsSt = self as NSString
-        return nsSt.appendingPathComponent(component)
+        return (self as NSString).appendingPathComponent(component)
     }
     
     public func x_appendingPath(extension ext: String) -> String? {
-        let nsSt = self as NSString
-        return nsSt.appendingPathExtension(ext)
+        return (self as NSString).appendingPathExtension(ext)
     }
     
 }

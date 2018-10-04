@@ -44,8 +44,18 @@ extension UINavigationController {
     private func defaultTransition(type: AnimationType, duration: Double = defaultAnimationDuration) -> CATransition {
         let transition = CATransition()
         transition.duration = duration
+#if swift(>=4.2)
         transition.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
-        transition.type = CATransitionType(rawValue: type.rawValue)
+        CATransitionType(rawValue: type.rawValue)
+#elseif swift(>=4.1)
+        transition.timingFunction = CAMediaTimingFunction(name: "easeInEaseOut")
+        switch type {
+        case .fade:     transition.type = kCATransitionFade
+        case .moveIn:   transition.type = kCATransitionMoveIn
+        case .push:     transition.type = kCATransitionPush
+        case .reveal:   transition.type = kCATransitionReveal
+        }
+#endif
         return transition
     }
     
@@ -74,6 +84,12 @@ extension UINavigationController {
     public func popFadeToRootViewController(duration: Double = 0.3) {
         addDefaultTransitionToLayer(type: .fade, duration: duration)
         popToRootViewController(animated: false)
+    }
+    
+    public func popToViewController(ofClass: AnyClass, animated: Bool = true) {
+        if let vc = viewControllers.filter({ $0.isKind(of: ofClass) }).last {
+            popToViewController(vc, animated: animated)
+        }
     }
     
     
