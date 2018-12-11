@@ -1,8 +1,7 @@
 //
 //  String+Validation.swift
-//  Xtensions
 //
-//  Copyright (c) 2018 Luis Cárdenas
+//  Copyright © 2018 Luis Cardenas. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -35,17 +34,17 @@ extension String {
     // MARK: - Methods
     public static func x_isValidEmail(with string: String) -> Bool {
         let regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
-        return x_matches(regex: regex)
+        return string.x_matches(regex: regex)
     }
     
     public static func x_isValidPhone(with string: String) -> Bool {
-        let regex = "^((\\+)|(00))[0-9]{6,14}$"
-        return x_matches(regex: regex)
+        let regex = "(?:\\+\\d{1,4})\\s*(\\d{6,14})"
+        return string.x_matches(regex: regex)
     }
     
-    public static func x_matches(regex: String) -> Bool {
+    public func x_matches(regex: String) -> Bool {
         let predicate = NSPredicate(format: "SELF MATCHES %@", regex)
-        return predicate.evaluate(with: nil, substitutionVariables: nil)
+        return predicate.evaluate(with: self, substitutionVariables: nil)
     }
     
 }

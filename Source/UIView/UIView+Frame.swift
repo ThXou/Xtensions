@@ -1,8 +1,7 @@
 //
 //  UIView+Frame.swift
-//  Xtensions
 //
-//  Copyright (c) 2018 Luis Cárdenas
+//  Copyright © 2018 Luis Cardenas. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -43,7 +42,7 @@ extension UIView {
         }
     }
     
-    public var x_x: CGFloat {
+    public var x: CGFloat {
         get {
             return frame.origin.x
         }
@@ -54,7 +53,7 @@ extension UIView {
         }
     }
     
-    public var x_y: CGFloat {
+    public var y: CGFloat {
         get {
             return frame.origin.y
         }
@@ -103,23 +102,23 @@ extension UIView {
     
     // MARK: - Frame borders
     public var x_left: CGFloat {
-        get { return x_x }
-        set(newValue) { x_x = newValue }
+        get { return x }
+        set(newValue) { x = newValue }
     }
     
     public var x_right: CGFloat {
         get { return frame.origin.x + frame.size.width }
-        set(newValue) { x_x = newValue - x_width }
+        set(newValue) { x = newValue - x_width }
     }
     
     public var x_top: CGFloat {
-        get { return x_y }
-        set(newValue) { x_y = newValue }
+        get { return y }
+        set(newValue) { y = newValue }
     }
     
     public var x_bottom: CGFloat {
         get { return frame.origin.y + frame.size.height }
-        set(newValue) { x_y = newValue - x_height }
+        set(newValue) { y = newValue - x_height }
     }
     
     
@@ -141,6 +140,7 @@ extension UIView {
             center = CGPoint(x: center.x, y: newValue)
         }
     }
+    
     
     // MARK: - Middle point
     public var x_middlePoint: CGPoint {
